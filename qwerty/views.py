@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from .forms import ContactForm
+from django.core.paginator import Paginator
 from .models import Subscribe
 
 
@@ -32,6 +33,13 @@ def blog(request):
             'posts': posts,
             'tags': tags
         }
+
+    p = Paginator(posts, 9)
+    page = request.GET.get('page')
+    posts_ = p.get_page(page)
+    context['p'] = p
+    context['posts'] = posts_
+
     return render(request, 'blog.html', context)
 
 
