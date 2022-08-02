@@ -1,4 +1,4 @@
-# Balita Blog
+# Moose Blog
 
 
 A blog system based on `python3.10` and `Django4`.
