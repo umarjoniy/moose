@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="hero-wrap hero-wrap-2">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 text-center ftco-animate pt-5">
+                <h1 class="mb-3 bread">About</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/index-2">Home <i
+                        class="fa fa-chevron-right"></i></a></span> <span>About <i
+                        class="fa fa-chevron-right"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero-wrap py-md-4">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters justify-content-center slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-10 ftco-animate py-5">
+                <div class="row pb-md-5">
+                    <div class="col-md-4">
+                        <div class="author">
+                            <div class="img"
+                                 style="background-image:url({% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %})"></div>
+                            <div class="text">
+                                <h3>{{data.author}}</h3>
+                                <p>{{data.subtitle}}</p>
+                                <ul class="ftco-footer-social list-unstyled mt-2">
+                                    <li class="ftco-animate"><a href="/"><span class="fa fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 author-details">
+                        <h2>{{data.description}}</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
